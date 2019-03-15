@@ -10,6 +10,7 @@ public abstract class Good {
         this.consumers = consumers;
 
     }
+    //TODO find eq. point between the Supply Curve and Demand Curve
     public void calculateValue(){
 
     }
@@ -19,6 +20,7 @@ public abstract class Good {
             totalIntialProduction += p.getIntialProduction();
         }
     }
+    //TODO implement demand curve for Consumers and more generally per good
     public void calculateDemandCurve(){
 
     }
