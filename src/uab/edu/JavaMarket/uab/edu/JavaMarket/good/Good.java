@@ -6,13 +6,12 @@ import uab.edu.JavaMarket.Producer;
 public abstract class Good {
     protected Producer[] producers;
     protected Consumer[] consumers;
+    protected double value;
     protected double totalMarginalProduction;
     protected double totalIntialProduction;
     protected double baseUtility;
-    public Good(Producer[] producers, Consumer[] consumers){
-        this.producers = producers;
-        this.consumers = consumers;
-
+    public Good(double intialValue){
+        this.value = intialValue;
     }
     public abstract void calculateUtility();
     //TODO find eq. point between the Supply Curve and Demand Curve
@@ -22,11 +21,10 @@ public abstract class Good {
     public double getUtility(){
         return this.baseUtility;
     }
+    public double getValue(){
+        return this.value;
+    }
     public void calculateSupplyCurve(){
-        for(Producer p : producers) {
-            totalMarginalProduction += p.getMarginalProduction();
-            totalIntialProduction += p.getIntialProduction();
-        }
     }
     //TODO implement demand curve for Consumers and more generally per good
     public void calculateDemandCurve(){

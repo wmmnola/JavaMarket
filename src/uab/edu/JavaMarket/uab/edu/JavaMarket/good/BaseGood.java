@@ -4,8 +4,9 @@ import uab.edu.JavaMarket.Consumer;
 import uab.edu.JavaMarket.Producer;
 
 public class BaseGood extends Good {
-    public BaseGood(Producer[] producers, Consumer[] consumers){
-        super(producers, consumers);
+    public BaseGood(double intialValue){
+        super(intialValue);
+        calculateUtility();
     }
 
     public void calculateUtility(){
